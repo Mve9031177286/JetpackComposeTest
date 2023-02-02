@@ -9,11 +9,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.Card
+import androidx.compose.material.*
 import androidx.compose.material.SnackbarDefaults.backgroundColor
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -47,7 +44,7 @@ fun ColumnStart() {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.White)
+            .background(MaterialTheme.colors.background)
     ) {
         Card(
             modifier = Modifier
@@ -78,7 +75,7 @@ fun ColumnStart() {
                 """|Добро пожаловать в
                 |Tracking Travel""".trimMargin(), // строки 71-71: тройные кавычки, символы | и
                 // метод .trimMargin() позволяют разбить строку на две нужным мне образом
-                style = TextStyle(color = Color.Black, fontSize = 25.sp),
+                style = TextStyle(color = MaterialTheme.colors.onBackground, fontSize = 25.sp),
                 textAlign = TextAlign.Center
             )
         }
@@ -94,7 +91,7 @@ fun ColumnStart() {
         ) {
             Text(
                 text = stringResource(R.string.start_text_2),
-                style = TextStyle(color = Color.Black, fontSize = 18.sp),
+                style = TextStyle(color = MaterialTheme.colors.onBackground, fontSize = 18.sp),
                 textAlign = TextAlign.Center
             )
         }
